@@ -1,0 +1,7 @@
+javax.script.AbstractScriptEngine.eval
+jdk.nashorn.api.scripting.NashornScriptEngine.eval
+jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl
+jdk.nashorn.internal.runtime.ScriptRuntime.apply
+jdk.nashorn.internal.runtime.ScriptFunctionData.invoke
+jdk.nashorn.internal.runtime.ScriptFunction.invoke
+jdk.nashorn.internal.scripts.Script$\^eval\_.:program
