@@ -14,7 +14,7 @@
     <dependency>
       <groupId>co.paralleluniverse</groupId>
       <artifactId>quasar-core</artifactId>
-      <version>0.7.1-SNAPSHOT</version>
+      <version>0.7.2</version>
     </dependency>
 
     <dependency>
@@ -120,8 +120,8 @@
           <executable>java</executable>
           <arguments>
             <!-- Debug -->
-            <!--argument>-Xdebug</argument>
-            <argument>-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005</argument-->
+            <!-- argument>-Xdebug</argument>
+            <argument>-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005</argument -->
             <argument>-Xbootclasspath/p:${co.paralleluniverse:quasar-core:jar}</argument>
             <argument>-Xbootclasspath/p:${com.google.guava:guava:jar}</argument>
 
@@ -139,10 +139,10 @@
             <!-- Enable if using compile-time (AoT) instrumentation -->
             <!-- argument>-Dco.paralleluniverse.fibers.disableAgentWarning</argument -->
 
-            <!-- Quasar Agent for JDK 7 -->
-            <argument>-javaagent:${co.paralleluniverse:quasar-core:jar}=vdc</argument>
+            <!-- Quasar Agent for JDK 7 and 8 -->
+            <argument>-javaagent:${co.paralleluniverse:quasar-core:jar}</argument>
 
-            <!-- Quasar Agent for JDK 8 -->
+            <!-- Quasar Agent optimized for JDK 8 -->
             <!-- argument>-javaagent:${co.paralleluniverse:quasar-core:jar:jdk8}</argument -->
 
             <!-- Classpath -->
@@ -174,10 +174,10 @@
           <!-- Enable if using compile-time (AoT) instrumentation -->
           <!-- argLine>-Dco.paralleluniverse.fibers.disableAgentWarning</argLine -->
 
-          <!-- Quasar Agent for JDK 7 -->
+          <!-- Quasar Agent for JDK 7 and 8 -->
           <argLine>-javaagent:${co.paralleluniverse:quasar-core:jar}</argLine>
 
-          <!-- Quasar Agent for JDK 8 -->
+          <!-- Quasar Agent optimized for JDK 8 -->
           <!-- argLine>-javaagent:${co.paralleluniverse:quasar-core:jar:jdk8}</argLine -->
         </configuration>
       </plugin>
